@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Shop — Everything you never knew you needed.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="dreadOverlay"></div>
+
+<div class="announce" data-i18n="announce">Free shipping on orders over $40 · 30-day returns</div>
+
+<header class="site-header">
+  <a class="logo" href="#">Random<span>Shop</span></a>
+  <nav class="nav">
+    <a href="#" data-i18n="navHome">Home</a>
+    <a href="#products" data-i18n="navShop">Shop</a>
+    <a href="#about" data-i18n="navAbout">About</a>
+    <a href="#support" data-i18n="navSupport">Support</a>
+  </nav>
+  <div class="header-actions">
+    <button id="langBtn" class="btn-ghost" type="button">فا</button>
+    <button id="cartBtn" class="btn-cart" type="button">
+      <span data-i18n="cart">Cart</span>
+      <span id="cartCount" class="badge">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1 data-i18n="heroTitle">Everything you never knew you needed.</h1>
+    <p data-i18n="heroSub">A small shop of small things. Carefully picked. Mostly harmless.</p>
+    <a href="#products" class="btn-primary" data-i18n="heroCta">Start browsing</a>
+  </section>
+
+  <section id="products" class="section">
+    <h2 class="section-title" data-i18n="shopTitle">All products</h2>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="about" class="section about">
+    <h2 class="section-title" data-i18n="aboutTitle">About us</h2>
+    <p id="aboutText"></p>
+  </section>
+
+  <section id="support" class="section support">
+    <h2 class="section-title" data-i18n="supportTitle">Support</h2>
+    <p id="supportText"></p>
+  <!-- بخش رهگیری سفارش -->
+<div style="margin-top: 30px;">
+  <input type="text" id="trackingInput" placeholder="Enter Tracking Code" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit;">
+  <button id="trackBtn" class="btn-primary" style="padding: 11px 20px;">Track</button>
+  <p id="trackResult" style="color: #900; font-weight: bold; margin-top: 15px; font-size: 18px; transition: opacity 0.5s;"></p>
+</div>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="disclaimer" data-i18n="disclaimer">Disclaimer</p>
+  <p class="copy" data-i18n="copy">Copy</p>
+</footer>
+
+<!-- پنجره‌ی محصول با بخش نظرات -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <button id="closeModal" class="close-btn">&times;</button>
+    <div id="modalThumb" class="modal-thumb"></div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalPrice" class="modal-price"></p>
+    <p id="modalDesc"></p>
+    
+    <!-- بخش نظرات -->
+    <div class="reviews-section">
+      <h3 data-i18n="reviewsTitle">Reviews</h3>
+      <div id="modalReviews" class="reviews-list"></div>
+      
+      <!-- فرم ثبت نظر جدید -->
+      <form id="reviewForm" class="review-form">
+        <h4 data-i18n="leaveReview">Leave a review</h4>
+        <input type="text" id="reviewName" placeholder="Your Name" required>
+        <textarea id="reviewText" placeholder="Your thoughts..." required></textarea>
+        <button type="submit" class="btn-primary" data-i18n="submitReview">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- پنجره‌ی پرداخت -->
+<div id="checkoutModal" class="modal">
+  <div class="modal-content">
+    <button id="closeCheckout" class="close-btn">&times;</button>
+    <h2>Checkout</h2>
+    <p>Select your payment method to complete the transaction:</p>
+    <form id="checkoutForm" style="margin-top:20px;">
+      <label style="display:block; margin-bottom:10px; cursor:pointer;"><input type="radio" name="pay" value="paypal" required> PayPal</label>
+      <label style="display:block; margin-bottom:10px; cursor:pointer;"><input type="radio" name="pay" value="photo"> A compromising photo of yourself</label>
+      <label style="display:block; margin-bottom:10px; cursor:pointer;"><input type="radio" name="pay" value="neighbor"> The left kidney of your neighbor</label>
+      <label style="display:block; margin-bottom:20px; cursor:pointer;"><input type="radio" name="pay" value="soul"> Your firstborn's soul</label>
+      <button type="submit" class="btn-primary" style="width:100%;">Confirm Order</button>
+    </form>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

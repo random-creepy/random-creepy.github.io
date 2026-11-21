@@ -1,0 +1,108 @@
+:root {
+  --bg: #fff8f0; --surface: #ffffff; --ink: #2b2118; --muted: #7a6a5b;
+  --accent: #ff7a45; --line: #f0e2d3; --radius: 18px; --shadow: 0 6px 18px rgba(120, 80, 40, .08);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.7;
+  transition: background .1s linear;
+}
+html[lang="fa"] body { font-family: Tahoma, sans-serif; }
+a { color: inherit; text-decoration: none; }
+
+#dreadOverlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: #000; opacity: 0; pointer-events: none; z-index: 999; transition: opacity 0.1s linear;
+}
+
+.announce { background: var(--accent); color: #fff; text-align: center; font-size: 14px; padding: 9px; }
+.site-header {
+  position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  padding: 14px 24px; background: rgba(255, 248, 240, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+}
+.logo { font-size: 20px; font-weight: 800; }
+.logo span { color: var(--accent); }
+.nav { display: flex; gap: 18px; flex: 1; }
+.nav a { color: var(--muted); font-size: 15px; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+button { font-family: inherit; cursor: pointer; }
+.btn-ghost { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 999px; padding: 7px 14px; }
+.btn-cart { display: flex; align-items: center; gap: 8px; background: var(--ink); color: var(--bg); border: none; border-radius: 999px; padding: 9px 16px; }
+.badge { background: var(--accent); color: #fff; border-radius: 999px; padding: 0 6px; font-size: 12px; }
+
+.hero { text-align: center; padding: 80px 24px; }
+.hero h1 { font-size: clamp(30px, 6vw, 52px); margin: 0 0 16px; }
+.hero p { color: var(--muted); margin-bottom: 28px; }
+.btn-primary { display: inline-block; background: var(--accent); color: #fff; padding: 13px 28px; border-radius: 999px; font-weight: 600; box-shadow: var(--shadow); border: none; }
+
+.section { padding: 40px 24px; max-width: 1080px; margin: 0 auto; }
+.section-title { font-size: 26px; margin: 0 0 24px; }
+.about p, .support p { color: var(--muted); max-width: 620px; font-size: 17px; }
+
+/* گرید محصولات */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  transition: transform .3s, filter .3s; cursor: pointer;
+}
+.card:hover { transform: translateY(-3px); filter: brightness(1.05); }
+
+.thumb {
+  font-size: 54px; text-align: center; padding: 18px 0;
+  background: var(--bg); border-radius: 12px; margin-bottom: 14px;
+}
+.thumb svg { width: 80px; height: 80px; }
+
+.thumb-img { width: 100%; height: 120px; object-fit: cover; border-radius: 12px; margin-bottom: 14px; }
+
+/* افکت‌های ترسناک برای محصولات پایین */
+.card.creepy-1 { filter: grayscale(0.6) sepia(0.4); transform: rotate(-1deg); }
+.card.creepy-2 { filter: grayscale(0.9) contrast(1.3); transform: rotate(1.5deg); border-color: #900; }
+.card.creepy-3 { filter: invert(1) hue-rotate(180deg); transform: rotate(-2deg) scale(0.97); }
+
+.pname { font-size: 16px; margin: 0 0 12px; }
+.row { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.price { font-weight: 700; }
+.btn-add { background: var(--ink); color: var(--bg); border: none; border-radius: 999px; padding: 8px 14px; font-size: 13px; }
+.site-footer { border-top: 1px solid var(--line); padding: 32px; text-align: center; margin-top: 40px; }
+.disclaimer { font-size: 13px; color: var(--muted); }
+.copy { font-size: 12px; color: var(--muted); opacity: .7; }
+
+/* استایل پنجره Popup */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(4px); overflow-y: auto; }
+.modal-content { background-color: var(--surface); margin: 5% auto; padding: 30px; border-radius: var(--radius); width: 90%; max-width: 550px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5); color: var(--ink); }
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; color: var(--muted); background: none; border: none; }
+.close-btn:hover { color: #f00; }
+.modal-thumb { font-size: 80px; text-align: center; margin-bottom: 20px; }
+.modal-img { width: 100%; max-height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+.modal-price { font-weight: bold; color: var(--accent); font-size: 20px; margin-bottom: 15px; }
+
+/* بخش نظرات در Popup */
+.reviews-section { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 20px; }
+.reviews-section h3 { margin-top: 0; }
+.reviews-list { margin-bottom: 20px; max-height: 150px; overflow-y: auto; padding-right: 10px; }
+.review-item { background: var(--bg); padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; font-size: 14px; }
+.review-item strong { display: block; color: var(--accent); }
+.review-form input, .review-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid var(--line); border-radius: 8px; font-family: inherit; }
+.review-form textarea { height: 80px; resize: vertical; }
+.review-form button { width: 100%; }
+
+/* استایل‌های فرم پرداخت */
+#checkoutModal label {
+  color: var(--ink);
+  font-size: 15px;
+}
+#checkoutModal h2 {
+  color: var(--accent);
+}
+#trackingInput:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+/* حذف کامل تمام افکت‌ها برای مهمان (The Guest) */
+.card[data-id="p31"] {
+  filter: none !important;
+  transform: none !important;
+}
