@@ -19,7 +19,7 @@ const PRODUCTS = [
   { id: "p12", price: 3, img: "images/Clips.jpg", name: { en: "Paperclips", fa: "گیره کاغذ" }, desc: { en: "Pack of 50.", fa: "بسته ۵۰ عددی." }, reviews: [ { name: 'sara', text: "I feel like their number keeps increasing. WTF!?"} ] },
   { id: "p13", price: 20, img: "images/Bear.jpg", name: { en: "Teddy Bear", fa: "خرس عروسکی" }, desc: { en: "Soft and huggable.", fa: "نرم و بغل‌کردنی." }, reviews: [] },
   { id: "p14", price: 2, img: "images/Balloon.jpg", name: { en: "Balloon", fa: "بادکنک" }, desc: { en: "Red balloon.", fa: "بادکنک قرمز." }, reviews: [] },
-  { id: "p15", price: 5, img: "images/Key.jpg", name: { en: "Keychain", fa: "جاکلیدی" }, desc: { en: "Metal keychain.", fa: "جاکلیدی فلزی." }, reviews: [] },
+  { id: "p15", price: 5, img: "images/Keys.jpg", name: { en: "Keychain", fa: "جاکلیدی" }, desc: { en: "Metal keychain.", fa: "جاکلیدی فلزی." }, reviews: [] },
 
   // --- ۱۶ تا ۲۵: کم‌کم عجیب ---
   { id: "p16", price: 25, img: "images/Frame.jpg", name: { en: "Empty Frame", fa: "قاب خالی" }, desc: { en: "No picture. It watches.", fa: "بدون عکس. تماشا می‌کند." }, reviews: [{name: "????", text: "I didn't buy this. It's on my wall."} ] }  ,
@@ -30,7 +30,7 @@ const PRODUCTS = [
   { id: "p21", price: 60, img: "images/Rug.jpg", name: { en: "Red Rug", fa: "فرش قرمز" }, desc: { en: "The stain keeps spreading.", fa: "لکه مدام پخش می‌شود." }, reviews: [{name: "Terrified", text: "The blood won't wash off."}, { name: 'mio' , text: " it's fucking bleeding!"}  ] },
   { id: "p22", price: 30, img: "images/Tooth.jpg", name: { en: "Tooth Necklace", fa: "گردنبند دندان" }, desc: { en: "They are real.", fa: "واقعی هستند." }, reviews: [{name: "NoName", text: "I woke up with one under my pillow."}] },
   { id: "p23", price: 20, img: "images/Bear.jpg", name: { en: "Wet Bear", fa: "خرس خیس" }, desc: { en: "Always damp. Smells like river water.", fa: "همیشه خیس. بوی آب رودخانه می‌دهد." }, reviews: [{name: "Wet", text: "I hear water dripping at night."} , {name: "Aida" , text: "Why isn't it drying?" }   ] },
-  { id: "p24", price: 5, img: "images/Keys.jpg", name: { en: "Basement Key", fa: "کلید زیرزمین" }, desc: { en: "Your house doesn't have a basement? After buying this key, it'll have one.", fa: "خانه شما زیرزمین ندارد؟ بعد از خریدن این کلید خواهد داشت." }, reviews: [{name: "Basement", text: "I found the door. It fits."}] },
+  { id: "p24", price: 5, img: "images/Key.jpg", name: { en: "Basement Key", fa: "کلید زیرزمین" }, desc: { en: "Your house doesn't have a basement? After buying this key, it'll have one.", fa: "خانه شما زیرزمین ندارد؟ بعد از خریدن این کلید خواهد داشت." }, reviews: [{name: "Basement", text: "I found the door. It fits."}] },
   { id: "p25", price: 80, img: "images/Photo.jpg", name: { en: "Polaroid", fa: "پولاروید" }, desc: { en: "Pictures show you sleeping.It changes every time you sleep.Indestructible, Trust me.", fa: "عکس‌ها شما را در خواب نشان می‌دهند. هربار بخوابید تغییر میکند. از بین نمیرود، به من اعتماد کنید." }, reviews: [{name: "Lens", text: "I was alone in the room."}] },
 
   // --- ۲۶ تا ۳۵: وحشتناک ---
