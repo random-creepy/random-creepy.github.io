@@ -8,7 +8,7 @@ const PRODUCTS = [
   { id: "p1", price: 14, img: "images/mug.jpg", name: { en: "Ceramic Mug", fa: "لیوان سرامیکی" }, desc: { en: "A perfect mug for your coffee.", fa: "یک لیوان عالی برای قهوه." }, reviews: [{name: "Sarah", text: "Love the color!"}, {name: "Ali", text: "Good quality."}] },
   { id: "p2", price: 9, img: "images/Socks.jpg", name: { en: "Cozy Socks", fa: "جوراب نرم" }, desc: { en: "Very soft and warm.", fa: "خیلی نرم و گرم." }, reviews: [{name: "John", text: "Keeps my feet warm."}, { name: "Maria" , text: "I can't get the socks off!"} ] },
   { id: "p3", price: 22, img: "images/Light.jpg", name: { en: "Night Light", fa: "چراغ‌خواب" }, desc: { en: "Soft glowing light.", fa: "نور نرم و ملایم." }, reviews: [{name: "Mary", text: "Perfect for kids room."} , {name: 'nina', text: "It shows shadows that shouldn't be there!"}] },
-  { id: "p4", price: 11, img: "images/Notebook.jpg", name: { en: "Notebook", fa: "دفترچه" }, desc: { en: "100 pages for your thoughts.", fa: "۱۰۰ صفحه برای افکار شما." }, reviews: [{name: "Reza", text: "Paper is very smooth."}] },
+  { id: "p4", price: 11, img: "images/Notebook.jpg", name: { en: "Notebook", fa: "دفترچه" }, desc: { en: "100 pages for your thoughts.", fa: "۱۰۰ صفحه برای افکار شما." }, reviews: [{name: "Reza", text: "Paper is very smooth."} , { name: "Arti" , text: "When I open it, I hear a woman crying..." } ] },
   { id: "p5", price: 34, img: "images/Teapot.jpg", name: { en: "Teapot", fa: "قوری" }, desc: { en: "Classic ceramic teapot.", fa: "قوری سرامیکی کلاسیک." }, reviews: [{name: "Emma", text: "Makes great tea."}] },
   { id: "p6", price: 6, img: "images/Magnet.jpg", name: { en: "Fridge Magnet", fa: "آهنربای یخچال" }, desc: { en: "Holds your lists.", fa: "لیست‌های شما را نگه می‌دارد." }, reviews: [{name: "Tom", text: "A bit small but cute."}, {name: 'unknown' , texte: "I think they move..." } ] },
   { id: "p7", price: 18, img: "images/Candle.jpg", name: { en: "Soy Candle", fa: "شمع سویا" }, desc: { en: "Smells like vanilla.", fa: "بوی وانیل می‌دهد." }, reviews: [{name: "Nina", text: "Smells amazing."}] },
@@ -19,7 +19,7 @@ const PRODUCTS = [
   { id: "p12", price: 3, img: "images/Clips.jpg", name: { en: "Paperclips", fa: "گیره کاغذ" }, desc: { en: "Pack of 50.", fa: "بسته ۵۰ عددی." }, reviews: [ { name: 'sara', text: "I feel like their number keeps increasing. WTF!?"} ] },
   { id: "p13", price: 20, img: "images/Bear.jpg", name: { en: "Teddy Bear", fa: "خرس عروسکی" }, desc: { en: "Soft and huggable.", fa: "نرم و بغل‌کردنی." }, reviews: [] },
   { id: "p14", price: 2, img: "images/Balloon.jpg", name: { en: "Balloon", fa: "بادکنک" }, desc: { en: "Red balloon.", fa: "بادکنک قرمز." }, reviews: [] },
-  { id: "p15", price: 5, img: "images/Keys.jpg", name: { en: "Keychain", fa: "جاکلیدی" }, desc: { en: "Metal keychain.", fa: "جاکلیدی فلزی." }, reviews: [] },
+  { id: "p15", price: 5, img: "images/Keys.jpg", name: { en: "Keychain", fa: "جاکلیدی" }, desc: { en: "Metal keychain.It opens every door. But it’s better not to open just any door with it—because you might not be able to close it again!", fa: "جاکلیدی فلزی.همه درها رو باز می‌کنه. ولی بهتره هر دری رو باهاش باز نکنید چون ممکنه دیگه نتونید ببندینش!" }, reviews: [] },
 
   // --- ۱۶ تا ۲۵: کم‌کم عجیب ---
   { id: "p16", price: 25, img: "images/Frame.jpg", name: { en: "Empty Frame", fa: "قاب خالی" }, desc: { en: "No picture. It watches.", fa: "بدون عکس. تماشا می‌کند." }, reviews: [{name: "????", text: "I didn't buy this. It's on my wall."} ] }  ,
